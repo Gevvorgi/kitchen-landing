@@ -80,36 +80,37 @@ function applyTranslations(translations) {
   updateLanguageDisplay();
 }
 
-// флаги кастом
-document
-  .querySelector(".language-switcher")
-  .addEventListener("change", function () {
-    const lang = this.value;
-    const display = this.nextElementSibling;
-
-
-    display.querySelector(".language-flag").src = `img/${lang}-lang.png`;
-    display.querySelector(".language-flag").alt = lang.toUpperCase();
-    display.querySelector(".language-name").textContent =
-      this.options[this.selectedIndex].text;
-  });
-
-
-const initialLang = document.querySelector(".language-switcher").value;
-document.querySelector(".language-flag").src = `img/${initialLang}-lang.png`;
+// Функция для обновления флага и названия языка
+function updateLanguageDisplay(lang) {
+  const display = document.querySelector('.language-switcher').nextElementSibling;
+  
+  display.querySelector(".language-flag").src = `img/${lang}-lang.png`;
+  display.querySelector(".language-flag").alt = lang.toUpperCase();
+  
+  // Находим option с выбранным языком и берем его текст
+  const langSelect = document.querySelector('.language-switcher');
+  const selectedOption = langSelect.querySelector(`option[value="${lang}"]`);
+  if (selectedOption) {
+    display.querySelector(".language-name").textContent = selectedOption.text;
+  }
+}
 
 // Инициализация языка
 (async function initLanguage() {
   const langSelect = document.querySelector('.language-switcher');
   const savedLang = localStorage.getItem('lang') || 'ru';
   
-  // Блок селект на время загрузки
+  // Устанавливаем язык в html-элемент
+  document.documentElement.lang = savedLang;
+  
+  // Блокируем селект на время загрузки
   langSelect.disabled = true;
   
   try {
     const translations = await loadTranslations(savedLang);
     langSelect.value = savedLang;
     applyTranslations(translations);
+    updateLanguageDisplay(savedLang); // Обновляем отображение флага и названия
   } catch (error) {
     console.error('Language init error:', error);
   } finally {
@@ -124,7 +125,9 @@ document.querySelector(".language-flag").src = `img/${initialLang}-lang.png`;
     try {
       const translations = await loadTranslations(lang);
       localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang; // Обновляем атрибут lang у html
       applyTranslations(translations);
+      updateLanguageDisplay(lang); // Обновляем отображение флага и названия
     } catch (error) {
       console.error('Language change error:', error);
     } finally {
@@ -132,6 +135,12 @@ document.querySelector(".language-flag").src = `img/${initialLang}-lang.png`;
     }
   });
 })();
+
+// Инициализация флага при загрузке
+document.addEventListener('DOMContentLoaded', () => {
+  const initialLang = localStorage.getItem('lang') || 'ru';
+  document.querySelector(".language-flag").src = `img/${initialLang}-lang.png`;
+});
 
 // счетчик
 document.addEventListener("DOMContentLoaded", function () {
