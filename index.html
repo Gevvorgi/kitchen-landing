@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <a href="#0"
+        ><img
+          class="logo__img-light"
+          src="/img/logo-black.svg"
+          alt="amatto kitchenes"
+    ></a>
+      <nav class="menu-bar">
+        <ul class="menu">
+          <li class="menu__list">
+            <a class="menu__link" href="#0">Главная</a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#0">О нас</a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#0">Рассрочка</a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#0">Блог</a>
+          </li>
+          <li class="menu__list">
+            <a class="menu__link" href="#0">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="cont-lang__wrapper">
+        <div>
+          <a class="phone-link btn-accent" href="tel:+11122333456"
+            >+111 22 333 456</a
+          >
+        </div>
+        <div class="language-switcher-container">
+          <select
+            class="language-switcher"
+            name="language-switcher"
+            id="language-switcher"
+          >
+            <option value="ru" selected>RU</option>
+            <option value="en" data-icon="🇬🇧">EN</option>
+          </select>
+          <!-- Кастомное отображение выбранного флага -->
+          <div class="custom-language-display">
+            <img src="img/ru-lang.png" alt="RU" class="language-flag">
+            <span class="language-name">RU</span>
+          </div>
+          <!--  -->
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="main-section" class="main-section">
+        <h1 class="main-title serif-text">Кухни на заказ</h1>
+        <p class="main-text">
+          Стильная кухня от производителя по цене на 20% ниже рынка
+        </p>
+        <ul class="main-menu">
+          <li class="main-menu__list">
+            <span class="accent-text">Бесплатный</span> дизайн проект
+          </li>
+          <li class="main-menu__list">
+            Гарантия <span class="accent-text">лучшей Цены</span>
+          </li>
+          <li class="main-menu__list">
+            Производство от <span class="accent-text">25 до 45 дней</span>
+          </li>
+          <li class="main-menu__list">
+            Гарантийное <span class="accent-text">обслуживание 5 лет</span>
+          </li>
+        </ul>
+        <button class="main-btn btn-accent">
+          Бесплатная консультация дизайнера
+        </button>
+      </section>
+
+      <section class="choise">
+        <div class="choise-title__wrapper title-wrapper">
+          <h2 class="choice-title general-title serif-text">
+            Все еще не можете определиться с выбором кухни?
+          </h2>
+          <div class="line"></div>
+        </div>
+        <div class="choise__card-wrapper">
+          <div class="choise__card">
+            <p>
+              Получите консультацию и
+              <span class="accent-text">эскиз мебели</span>
+            </p>
+          </div>
+          <div class="choise__card">
+            <p>
+              Подберем материалы
+              <span class="accent-text">сочетая цену и качество</span>
+            </p>
+          </div>
+          <div class="choise__card">
+            <p>
+              Подберем фурнитуру для
+              <span class="accent-text">удобства и комфорта</span>
+            </p>
+          </div>
+          <div class="choise__card">
+            <p>
+              Разработаем <span class="accent-text">бесплатно 3D</span> проект
+            </p>
+          </div>
+          <div class="choise__card">
+            <p>
+              Поможем <span class="accent-text">сэкономить 20%</span> от
+              стоимости
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="kitchen-promo">
+        <div class="promo-wrapper">
+          <div class="promo">
+            <div class="title-wrapper">
+              <h2 class="promo-title general-title">
+                Закажи <span class="accent-text">Кухню</span>
+              </h2>
+              <div class="line"></div>
+            </div>
+            <p class="promo-data-text">До 31 Марта</p>
+            <p class="promo-text">Получи</p>
+            <button class="btn-accent btn-promo">Посудомоечную Машину</button>
+            <p class="promo-text">В Подарок</p>
+          </div>
+          <div class="timer">
+            <div class="timer-block">
+              <span class="days">04</span>
+              <span class="timer-text">Дней</span>
+            </div>
+            <span class="tt-span">:</span>
+            <div class="timer-block">
+              <span class="hours">09</span>
+              <span class="timer-text">Часов</span>
+            </div>
+            <span class="tt-span">:</span>
+            <div class="timer-block">
+              <span class="minutes">34</span>
+              <span class="timer-text">Минут</span>
+            </div>
+            <span class="tt-span">:</span>
+            <div class="timer-block">
+              <span class="seconds">32</span>
+              <span class="timer-text">Секунд</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="works">
+        <div class="works-title__wrapper title-wrapper">
+          <h2 class="works-title general-title serif-text">Наши работы</h2>
+          <div class="line"></div>
+        </div>
+        <div class="works-wrapper">
+          <div class="work-card work-card--1">
+            <h3 class="work-card__title serif-text serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--2">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--3">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--4">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--5">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--6">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+
+          <!-- Скрытые карточки -->
+
+          <div class="work-card work-card--7 hidden">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--8 hidden">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--9 hidden">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--10 hidden">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--11 hidden">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+          <div class="work-card work-card--12 hidden">
+            <h3 class="work-card__title serif-text">Severin</h3>
+            <div class="work-card__text-link-wrapper">
+              <div class="work-card__text-wrapper">
+                <p class="work-card__subtitle">
+                  <span class="accent-text">11 654 </span>лей / месяц
+                </p>
+                <p class="work-card__text">без первого взноса - 12 месяцев</p>
+              </div>
+              <a href="#0" class="work-card__link"
+                ><img src="img/works-link.svg" alt="посмотреть работу"
+            ></a>
+            </div>
+          </div>
+        </div>
+        <button class="work-card__btn btn-accent">Раскрыть Ещё</button>
+      </section>
+      <section class="advantages">
+        <div class="advantages-title__wrapper title-wrapper">
+          <h2 class="advantages-title general-title serif-text">
+            Наши преймущества
+          </h2>
+          <div class="line"></div>
+        </div>
+        <div class="advantages-cards">
+          <div class="advantages-card">
+            <img src="img/advantages-1.svg" alt="гарант">
+            <h3 class="advantages-card__title">Гарантия лучшей цены</h3>
+            <p class="advvantages-card__text">
+              Мы производители, поэтому сможем предложить вам лучшую стоимость
+              под ваш запрос
+            </p>
+          </div>
+
+          <div class="advantages-card">
+            <img src="img/advantages-2.svg" alt="гарант">
+            <h3 class="advantages-card__title">Оплата в рассрочку</h3>
+            <p class="advvantages-card__text">
+              Получи сейчас желаемую кухню без аванса и первоначального взноса,
+              оплачивайте равными платежами в течение 12 месяцев
+            </p>
+          </div>
+
+          <div class="advantages-card">
+            <img src="img/advantages-3.svg" alt="гарант">
+            <h3 class="advantages-card__title">Гарантия лучшей цены</h3>
+            <p class="advvantages-card__text">
+              Произведем вашу кухню по индивидуальному проекту за 25 - 45 дней
+            </p>
+          </div>
+
+          <div class="advantages-card">
+            <img src="img/advantages-4.svg" alt="гарант">
+            <h3 class="advantages-card__title">Гарантия лучшей цены</h3>
+            <p class="advvantages-card__text">
+              Мы гарантируем 100% качество без брака. Проводим пробный монтаж
+              кухни в цеху, проверяя тем самым ее качество и все детали
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="order">
+        <div class="order-wrapper">
+          <h2 class="order-title accent-text">Закажи кухню</h2>
+          <p class="order-subtitle">И получи 10% скидку</p>
+          <p class="order-text">
+            На всю бытовую технику в сети Bomba и Maximum
+          </p>
+          <button class="btn-accent btn-order">Заказать Кухню</button>
+        </div>
+      </section>
+      <section class="consultation">
+        <div class="consultation-wrapper">
+          <h2 class="consultation-title serif-text">
+            Получите бесплатно дизайн проект кухни и консультацию дизайнера
+          </h2>
+          <p class="consultation-text">
+            Вы узнаете точную <span>стоимость вашей кухни</span> и получите
+            <span>3D-проект</span>
+          </p>
+          <div class="consultation-phone__wrapper">
+            <input
+              class="phone-input"
+              id="phoneInput"
+              type="tel"
+              placeholder="Ваш телефон"
+          >
+            <button class="consultation-btn">Записаться</button>
+          </div>
+        </div>
+      </section>
+      <section class="installment">
+        <div class="installment-title__wrapper title-wrapper">
+          <h2 class="installment-title general-title serif-text">
+            Покупай в рассрочку!
+          </h2>
+          <div class="line"></div>
+        </div>
+        <div class="installment-calculator__wrapper">
+          <div class="calculator__wrapper">
+            <p class="calculator-text">
+              Ваша новая кухня без денег и предоплаты!
+            </p>
+            <ul class="calculator-menu">
+              <li class="calculator-list"><span>Рассрочка 12 месяцев</span></li>
+              <li class="calculator-list">
+                <span>Без комиссии и процентов</span>
+              </li>
+            </ul>
+            <table class="calculator">
+              <tr>
+                <td>Ваш Бюджет ₽:</td>
+                <td>
+                  <input
+                    class="tb-input"
+                    type="number"
+                    id="budget"
+                    value="300000"
+                    min="0"
+                >
+                </td>
+              </tr>
+              <tr>
+                <td>Срок рассрочки (месяцев):</td>
+                <td>
+                  <select class="tb-select" id="period">
+                    <option value="6">6 месяцев</option>
+                    <option value="12" selected>12 месяцев</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>Первоначальный взнос %:</td>
+                <td>
+                  <input
+                    class="tb-input"
+                    type="number"
+                    id="downPayment"
+                    value="10"
+                    min="0"
+                    max="100"
+                >
+                </td>
+              </tr>
+            </table>
+
+            <div class="payment-result">
+              <p>Ежемесячный платёж:</p>
+              <span id="monthlyPayment" class="highlight">0₽</span>
+            </div>
+            <div class="connection-wrapper">
+              <input
+                class="connection-input"
+                type="text"
+                id="name"
+                placeholder="Ваше имя:"
+            >
+              <input
+                class="connection-input phone-input"
+                type="tel"
+                id="phoneInput2"
+                placeholder="Ваш телефон:"
+            >
+            </div>
+            <button class="btn-accent calculator-btn">
+              Отправить Заявку На Рассрочку
+            </button>
+          </div>
+          <div class="instlament-img">
+            <img src="img/instlament-plan-bg.png" alt="просто декор">
+          </div>
+        </div>
+      </section>
+
+      <section class="procces">
+        <div class="procces-title__wrapper title-wrapper">
+          <h2 class="procces-title general-title serif-text">
+            Как выстроен процесс работы с нашими клиентами
+          </h2>
+          <div class="line"></div>
+        </div>
+        <div class="procces-cards">
+          <div class="procces-card">
+            <img src="img/procces-1.png" alt="декор">
+            <div class="procces-card__text-wrapper">
+              <h3 class="procces-card__title">1 <span></span> Запись</h3>
+              <p class="procces-card__text">
+                Запишитесь на консультацию по телефону или онлайн
+              </p>
+            </div>
+          </div>
+          <div class="procces-card">
+            <img src="img/procces-2.png" alt="декор">
+            <div class="procces-card__text-wrapper">
+              <h3 class="procces-card__title">2 <span></span> Запись</h3>
+              <p class="procces-card__text">
+                Снимем замеры стен и потолков, рекомендуем, как провести
+                коммуникации, определим размещение секции
+              </p>
+            </div>
+          </div>
+          <div class="procces-card">
+            <img src="img/procces-3.png" alt="декор">
+            <div class="procces-card__text-wrapper">
+              <h3 class="procces-card__title">3 <span></span> Дизайн</h3>
+              <p class="procces-card__text">
+                Дизайнер разрабатывает дизайн проект по вашим пожеланиям,
+                подбирает материалы, учитывая планировку и ваш бюджет
+              </p>
+            </div>
+          </div>
+          <div class="procces-card">
+            <img src="img/procces-4.png" alt="декор">
+            <div class="procces-card__text-wrapper">
+              <h3 class="procces-card__title">4 <span></span> Производство</h3>
+              <p class="procces-card__text">
+                Срок изготовления кухни от 25 дней
+              </p>
+            </div>
+          </div>
+          <div class="procces-card">
+            <img src="img/procces-5.png" alt="декор">
+            <div class="procces-card__text-wrapper">
+              <h3 class="procces-card__title">5 <span></span> Монтаж</h3>
+              <p class="procces-card__text">
+                Быстро и качественно установим мебель и встраиваемую технику
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="professional">
+        <div class="professional-title__wrapper title-wrapper">
+          <h2 class="professional-title general-title serif-text">
+            Доверьте вашу кухню профессионалам
+          </h2>
+          <div class="line"></div>
+        </div>
+        <div class="professional-wrapper">
+          <div class="proffesional-card">
+            <img class="professional-img" src="img/profi-1.png" alt="Татьяна">
+            <p class="professional-name">Татьяна</p>
+            <p class="professional-skill">Дизайнер</p>
+            <p class="professional-description">
+              "Кухня должна быть одновременно красивой и удобной". Любит
+              сложные, нестандартные и яркие проекты.
+            </p>
+          </div>
+          <div class="proffesional-card">
+            <img
+              class="professional-img"
+              src="img/profi-2.png"
+              alt="Светлана"
+          >
+            <p class="professional-name">Светлана</p>
+            <p class="professional-skill">Дизайнер</p>
+            <p class="professional-description">
+              Дизайнер с 20 летним опытом работы с мебелью. Работала на
+              крупнейших молдавских фабриках, досконально разбирается в
+              устройстве кухонь.
+            </p>
+          </div>
+          <div class="proffesional-card">
+            <img
+              class="professional-img"
+              src="img/profi-3.png"
+              alt="Кристиан"
+          >
+            <p class="professional-name">Кристиан</p>
+            <p class="professional-skill">Дизайнер</p>
+            <p class="professional-description">
+              Опыт работы 5 лет. Художник, преподает в школе дизайна. Делает в
+              кухнях акцент на эстетике и красоте.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mistakes">
+        <div class="mistake-title__wrapper title-wrapper">
+          <h2 class="mistake-title general-title serif-text">
+            Четыре ошибки при выборе кухни
+          </h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="mistakes-container" id="sliderContainer">
+          <div class="mistake-card">
+            <div class="mistake-number">1</div>
+            <h3 class="mistake-subtitle">
+              Сделаю проект сам или мне разработали на бумажке
+            </h3>
+            <p class="mistake-description">
+              Не удобно расположены зоны складирования, не предусмотрено место
+              для хранения, не удобно и раздражает
+            </p>
+          </div>
+
+          <div class="mistake-card active">
+            <div class="mistake-number">2</div>
+            <h3 class="mistake-subtitle">
+              Нет договора и описания, что входит в стоимость
+            </h3>
+            <p class="mistake-description">
+              Фурнитура низкого качества, нет гарантии качества, при браке нет с
+              кого спросить, получаете не то, за что платили
+            </p>
+          </div>
+
+          <div class="mistake-card">
+            <div class="mistake-number">3</div>
+            <h3 class="mistake-subtitle">Частный мастер</h3>
+            <p class="mistake-description">
+              Не соблюдение технологии изготовления, сроки и качество не
+              указаны, через 6 месяцев требуется замена материалов
+            </p>
+          </div>
+
+          <div class="mistake-card">
+            <div class="mistake-number">4</div>
+            <h3 class="mistake-subtitle">Известная компания или бренд</h3>
+            <p class="mistake-description">
+              Не удобно расположены зоны складирования, не предусмотрено место
+              для хранения, не удобно и раздражает
+            </p>
+          </div>
+        </div>
+
+        <div class="slider-nav" id="sliderNav">
+          <div class="slider-arrow left-arrow">←</div>
+          <div class="slider-arrow right-arrow">→</div>
+        </div>
+      </section>
+
+      <section class="consultation">
+        <div class="consultation-wrapper">
+          <h2 class="consultation-title serif-text">
+            Получите бесплатно дизайн проект кухни и консультацию дизайнера
+          </h2>
+          <p class="consultation-text">
+            Вы узнаете точную <span>стоимость вашей кухни</span> и получите
+            <span>3D-проект</span>
+          </p>
+          <div class="consultation-phone__wrapper">
+            <input
+              class="phone-input"
+              id="phoneInput3"
+              type="tel"
+              placeholder="Ваш телефон"
+          >
+            <button class="consultation-btn">Записаться</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog">
+        <div class="blog-title__wrapper title-wrapper">
+          <h2 class="blog-title general-title serif-text">Блог</h2>
+          <div class="line"></div>
+        </div>
+        <div class="blog-cards">
+          <div class="blog-card">
+            <img src="img/blog-1.png" alt="блог 1">
+            <p class="blog-card__date">Март 11, 2022</p>
+            <h4 class="blog-card__title">
+              Из чего складывается стоимость кухни?
+            </h4>
+            <p class="blog-card-text">Рассказывает дизайнер Светлана</p>
+            <button class="blog-card__btn btn-accent">
+              Прочесть за 7 минут
+            </button>
+          </div>
+          <div class="blog-card">
+            <img src="img/blog-2.png" alt="блог 2">
+            <p class="blog-card__date">Март 11, 2022</p>
+            <h4 class="blog-card__title">
+              Из чего складывается стоимость кухни?
+            </h4>
+            <p class="blog-card-text">Рассказывает дизайнер Светлана</p>
+            <button class="blog-card__btn btn-accent">
+              Прочесть за 7 минут
+            </button>
+          </div>
+          <div class="blog-card">
+            <img src="img/blog-3.png" alt="блог 3">
+            <p class="blog-card__date">Март 11, 2022</p>
+            <h4 class="blog-card__title">
+              Из чего складывается стоимость кухни?
+            </h4>
+            <p class="blog-card-text">Рассказывает дизайнер Светлана</p>
+            <button class="blog-card__btn btn-accent">
+              Прочесть за 7 минут
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-wrapper">
+        <div class="ft-contact-link">
+          <img class="ft-logo-img" src="img/logo-black.svg" alt="amatto">
+          <div class="contacts-links__wrapper">
+            <a href="#0" class="link-icon"
+              ><img src="img/viber-icon.svg" alt="viber" class="link-img"></a
+            ><a href="#0" class="link-icon"
+              ><img
+                src="img/whatsapp-icon.svg"
+                alt="whatsapp"
+                class="link-img"></a
+            ><a href="#0" class="link-icon"
+              ><img
+                src="img/youtube-icon.svg"
+                alt="youtube"
+                class="link-img"></a
+            ><a href="#0" class="link-icon"
+              ><img src="img/viber-icon.svg" alt="viber" class="link-img"></a
+            ><a href="#0" class="link-icon"
+              ><img
+                src="img/whatsapp-icon.svg"
+                alt="whatsapp"
+                class="link-img"></a
+            ><a href="#0" class="link-icon"
+              ><img src="img/youtube-icon.svg" alt="youtube" class="link-img"
+          ></a>
+          </div>
+        </div>
+        <div class="ft-contats-menu">
+          <div class="ft-menu">
+            <p class="ft-menu-title">Republic of Moldova</p>
+            <div class="menu-title__line"></div>
+            <ul class="ft-menu">
+              <li class="ft-menu-list menu-location">
+                Chisinau,15/2 Trandafirilor Str.
+              </li>
+              <li class="ft-menu-list menu-telephone">
+                <a class="ft-menu-link" href="tel:+12345678910"
+                  >+123 45 678 910</a
+                >
+              </li>
+              <li class="ft-menu-list menu-email">
+                <a href="mailto:mail@mail.md">mail@mail.md</a>
+              </li>
+            </ul>
+          </div>
+          <div class="ft-menu">
+            <p class="ft-menu-title">Republic of Moldova</p>
+            <div class="menu-title__line"></div>
+            <ul class="ft-menu">
+              <li class="ft-menu-list menu-location">
+                Chisinau,15/2 Trandafirilor Str.
+              </li>
+              <li class="ft-menu-list menu-telephone">
+                <a class="ft-menu-link" href="tel:+12345678910"
+                  >+123 45 678 910</a
+                >
+              </li>
+              <li class="ft-menu-list menu-email">
+                <a href="mailto:mail@mail.md">mail@mail.md</a>
+              </li>
+            </ul>
+          </div>
+          <div class="ft-menu">
+            <p class="ft-menu-title">Republic of Moldova</p>
+            <div class="menu-title__line"></div>
+            <ul class="ft-menu">
+              <li class="ft-menu-list menu-location">
+                Chisinau,15/2 Trandafirilor Str.
+              </li>
+              <li class="ft-menu-list menu-telephone">
+                <a class="ft-menu-link" href="tel:+12345678910"
+                  >+123 45 678 910</a
+                >
+              </li>
+              <li class="ft-menu-list menu-email">
+                <a href="mailto:mail@mail.md">mail@mail.md</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="footer-text">© 2022 Amatto. All Rights Reserved.</p>
+    </footer>
+    <!-- Ассистент -->
+    <div class="chat-assistant">
+      <div class="chat-icon" id="chatIcon">
+        <img src="img/whatsapp-icon.svg" alt="Помощник">
+      </div>
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+          <h4>Онлайн-помощник</h4>
+          <button class="chat-close">&times;</button>
+        </div>
+        <div class="chat-body">
+          <p>
+            Онлайн-консультация на данном сайте невозможна. Страница не является
+            коммерческой и была сделана в учебных целях.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
