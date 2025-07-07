@@ -88,15 +88,24 @@ a {
 
 /* Общие стили конец */
 
+.header-fixed-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
 .header {
-  height: 108px;
-  padding: 27px 60px;
-  /* position: fixed;
-    z-index: 1000; */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 108px;
+  padding: 27px 60px;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .menu {
@@ -179,6 +188,7 @@ a {
 /* Блок main */
 
 .main-section {
+  margin-top: 108px;
   background-image: url("../img/main-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -682,7 +692,7 @@ a {
   font-size: 2rem;
   font-weight: 700;
 }
-.procces-card__title span {
+.procces-line {
   display: inline-block;
   width: 20px;
   height: 1px;
@@ -978,9 +988,9 @@ a {
   bottom: 80px;
   right: 0;
   width: 300px;
-  background: white;
+  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   transform: translateY(20px);
   opacity: 0;
@@ -996,7 +1006,7 @@ a {
 
 .chat-header {
   background: var(--accent-color);
-  color: white;
+  color: #fff;
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -1012,7 +1022,7 @@ a {
 .chat-close {
   background: none;
   border: none;
-  color: white;
+  color: #fff;
   font-size: 24px;
   cursor: pointer;
   line-height: 1;
@@ -1028,6 +1038,33 @@ a {
   padding: 20px;
   font-size: 14px;
   line-height: 1.5;
+}
+
+/* Фиксированная шапка, стили при скролле */
+
+.header-fixed-wrapper.scrolled {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+.header-fixed-wrapper.scrolled .header {
+  height: 70px;
+  padding: 10px 60px;
+}
+
+.header-fixed-wrapper.scrolled .cont-lang__wrapper {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  margin-left: -20px;
+  transition: all 0.3s ease;
+}
+
+.header-fixed-wrapper.scrolled .menu {
+  margin-left: auto;
+  margin-right: auto;
+  gap: 100px;
 }
 
 @media (max-width: 1024px) {

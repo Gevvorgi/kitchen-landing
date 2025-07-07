@@ -1,3 +1,35 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const headerWrapper = document.getElementById('headerWrapper');
+  const heroSection = document.querySelector('.hero-section');
+  
+  if (!headerWrapper) return;
+
+  function updateHeader() {
+    const heroHeight = heroSection ? heroSection.offsetHeight : 500;
+    const scrollPosition = window.scrollY;
+    
+    if (scrollPosition > heroHeight * 0.2) {
+      headerWrapper.classList.add('scrolled');
+    } else {
+      headerWrapper.classList.remove('scrolled');
+    }
+  }
+
+  // Оптимизация производительности
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateHeader();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  updateHeader();
+});
+
 // функция загрузки переводов с обработкой ошибок
 async function loadTranslations(lang) {
   try {
@@ -11,43 +43,42 @@ async function loadTranslations(lang) {
 }
 
 // обработчик изменения языка
-document
-  .querySelector(".language-switcher")
-  .addEventListener("change", async (e) => {
-    const lang = e.target.value;
-    const translations = await loadTranslations(lang);
+async function loadTranslations(lang) {
+  try {
+    const response = await fetch(`lang/${lang}.json`);
+    if (!response.ok) throw new Error("Translation not found");
+    return await response.json();
+  } catch (error) {
+    console.error("Translation load error:", error);
+    return {};
+  }
+}
 
+// Получение значения перевода по ключу (с поддержкой вложенности)
+function getTranslation(translations, key) {
+  return key.split('.').reduce((obj, k) => (obj || {})[k], translations);
+}
 
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const key = el.dataset.i18n;
-      if (translations[key]) {
-        el.textContent = translations[key];
+// Обновление DOM элементов с переводами
+function applyTranslations(translations) {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const value = getTranslation(translations, key);
+    
+    if (value !== undefined) {
+      if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+        el.placeholder = value;
+      } else if (el.tagName === 'IMG' && el.hasAttribute('alt')) {
+        el.alt = value;
+      } else {
+        el.textContent = value;
       }
-    });
-
-
-    localStorage.setItem("lang", lang);
-  });
-
-
-(async () => {
-  const savedLang = localStorage.getItem("lang") || "ru";
-  const translations = await loadTranslations(savedLang);
-
-
-  document.querySelector(".language-switcher").value = savedLang;
-
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.dataset.i18n;
-    if (translations[key]) {
-      el.textContent = translations[key];
     }
   });
-})();
-
-const langSelect = document.querySelector(".language-switcher");
-langSelect.disabled = true; 
-langSelect.disabled = false;
+  
+  // Обновляем кастомное отображение языка
+  updateLanguageDisplay();
+}
 
 // флаги кастом
 document
@@ -66,6 +97,41 @@ document
 
 const initialLang = document.querySelector(".language-switcher").value;
 document.querySelector(".language-flag").src = `img/${initialLang}-lang.png`;
+
+// Инициализация языка
+(async function initLanguage() {
+  const langSelect = document.querySelector('.language-switcher');
+  const savedLang = localStorage.getItem('lang') || 'ru';
+  
+  // Блок селект на время загрузки
+  langSelect.disabled = true;
+  
+  try {
+    const translations = await loadTranslations(savedLang);
+    langSelect.value = savedLang;
+    applyTranslations(translations);
+  } catch (error) {
+    console.error('Language init error:', error);
+  } finally {
+    langSelect.disabled = false;
+  }
+  
+  // Обработчик изменения языка
+  langSelect.addEventListener('change', async (e) => {
+    const lang = e.target.value;
+    langSelect.disabled = true;
+    
+    try {
+      const translations = await loadTranslations(lang);
+      localStorage.setItem('lang', lang);
+      applyTranslations(translations);
+    } catch (error) {
+      console.error('Language change error:', error);
+    } finally {
+      langSelect.disabled = false;
+    }
+  });
+})();
 
 // счетчик
 document.addEventListener("DOMContentLoaded", function () {
@@ -123,58 +189,143 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // кнопка раскрытия карточек
 
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.querySelector(".work-card__btn");
-  const cards = document.querySelectorAll(".work-card");
+let currentTranslations = {};
+
+// Функция для загрузки переводов
+async function loadTranslations(lang) {
+  try {
+    const response = await fetch(`lang/${lang}.json`);
+    if (!response.ok) throw new Error("Translation not found");
+    return await response.json();
+  } catch (error) {
+    console.error("Translation load error:", error);
+    return {};
+  }
+}
+
+// Функция для получения перевода по ключу
+function getTranslation(key) {
+  return key.split('.').reduce((obj, k) => (obj || {})[k], currentTranslations);
+}
+
+// Обновление текста кнопки галереи
+function updateGalleryButton() {
+  const btn = document.querySelector('.work-card__btn');
+  if (!btn) return;
+
+  const hiddenCount = document.querySelectorAll('.work-card.hidden').length;
+  
+  if (hiddenCount > 0) {
+    const translation = getTranslation('gallery.showMore') || 'Показать ещё';
+    btn.textContent = `${translation} (+${hiddenCount})`;
+    btn.dataset.i18n = 'gallery.showMore';
+  } else {
+    btn.textContent = getTranslation('gallery.showLess') || 'Скрыть';
+    btn.dataset.i18n = 'gallery.showLess';
+  }
+}
+
+// Обновление плейсхолдеров в блоке рассрочки
+function updateInstallmentPlaceholders() {
+  const nameInput = document.querySelector('#name');
+  const phoneInput = document.querySelector('#phoneInput2');
+  
+  if (nameInput) {
+    nameInput.placeholder = getTranslation('installment.form.name.placeholder') || 'Ваше имя:';
+  }
+  if (phoneInput) {
+    phoneInput.placeholder = getTranslation('installment.form.phone.placeholder') || 'Ваш телефон:';
+  }
+}
+
+// Инициализация галереи
+function initGallery() {
+  const btn = document.querySelector('.work-card__btn');
+  const cards = document.querySelectorAll('.work-card');
   const initialShow = 6;
-  const step = 3; 
-  let visibleCount = initialShow;
+  const step = 3;
+  
+  if (!btn || !cards.length) return;
 
-  const initCards = () => {
-    cards.forEach((card, index) => {
-      card.classList.toggle("hidden", index >= initialShow);
-    });
-    updateButtonText();
-  };
+  cards.forEach((card, index) => {
+    card.classList.toggle('hidden', index >= initialShow);
+  });
 
-  // обновление текста кнопки
-  const updateButtonText = () => {
-    const hiddenCount = document.querySelectorAll(".work-card.hidden").length;
-    btn.textContent =
-      hiddenCount > 0 ? "Показать ещё (+" + hiddenCount + ")" : "Скрыть";
-
-    btn.style.display =
-      hiddenCount === 0 && visibleCount === initialShow ? "none" : "block";
-  };
-
-  const toggleCards = () => {
-    const hiddenCards = document.querySelectorAll(".work-card.hidden");
-
+  btn.addEventListener('click', () => {
+    const hiddenCards = document.querySelectorAll('.work-card.hidden');
+    
     if (hiddenCards.length > 0) {
-      const cardsToShow = Math.min(step, hiddenCards.length);
-      for (let i = 0; i < cardsToShow; i++) {
-        hiddenCards[i].classList.remove("hidden");
+      const showCount = Math.min(step, hiddenCards.length);
+      for (let i = 0; i < showCount; i++) {
+        hiddenCards[i].classList.remove('hidden');
       }
-      visibleCount += cardsToShow;
     } else {
       cards.forEach((card, index) => {
-        if (index >= initialShow) {
-          card.classList.add("hidden");
-        }
+        if (index >= initialShow) card.classList.add('hidden');
       });
-      visibleCount = initialShow;
       window.scrollTo({
         top: btn.offsetTop - 100,
-        behavior: "smooth",
+        behavior: 'smooth'
       });
     }
+    
+    updateGalleryButton();
+  });
 
-    updateButtonText();
-  };
+  updateGalleryButton();
+}
 
-  btn.addEventListener("click", toggleCards);
+// Применение переводов
+function applyTranslations(translations) {
+  currentTranslations = translations || {};
+  
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const value = getTranslation(key);
+    
+    if (value !== undefined) {
+      if (el.tagName === 'INPUT' && el.hasAttribute('placeholder')) {
+        el.placeholder = value;
+      } else if (el.tagName === 'IMG' && el.hasAttribute('alt')) {
+        el.alt = value;
+      } else {
+        el.textContent = value;
+      }
+    }
+  });
+  
+  // Особые обновления
+  updateGalleryButton();
+  updateInstallmentPlaceholders();
+}
 
-  initCards();
+// Инициализация при загрузке страницы
+document.addEventListener('DOMContentLoaded', async () => {
+  const langSelect = document.querySelector('.language-switcher');
+  const savedLang = localStorage.getItem('lang') || 'ru';
+  
+  try {
+    const translations = await loadTranslations(savedLang);
+    applyTranslations(translations);
+    if (langSelect) langSelect.value = savedLang;
+  } catch (error) {
+    console.error('Failed to load translations:', error);
+  }
+  
+  initGallery();
+  
+  if (langSelect) {
+    langSelect.addEventListener('change', async (e) => {
+      const lang = e.target.value;
+      try {
+        const translations = await loadTranslations(lang);
+        localStorage.setItem('lang', lang);
+        applyTranslations(translations);
+      } catch (error) {
+        console.error('Failed to change language:', error);
+      }
+    });
+  }
 });
 
 // номер телефона

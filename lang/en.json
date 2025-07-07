@@ -1,0 +1,385 @@
+{
+  "logo": {
+    "alt": "amatto kitchenes"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "installment": "Installment",
+    "blog": "Blog",
+    "contacts": "Contacts"
+  },
+  "hero": {
+    "title": "Custom Kitchens",
+    "subtitle": "Stylish kitchen from manufacturer at 20% below market price",
+    "features": {
+      "1": {
+        "highlight": "Free",
+        "text": "design project"
+      },
+      "2": {
+        "prefix": "Guaranteed ",
+        "highlight": "Best Price"
+      },
+      "3": {
+        "prefix": "Production in ",
+        "highlight": "25 to 45 days"
+      },
+      "4": {
+        "prefix": "Warranty ",
+        "highlight": "service for 5 years"
+      }
+    }
+  },
+    "gallery": {
+    "showMore": "Show More",
+    "showLess": "Show Less"
+  },
+  "button": {
+    "consultation": "Free Designer Consultation",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "order": "Order Kitchen",
+    "signup": "Sign Up"
+  },
+  "choice": {
+    "title": "Still can't decide on a kitchen?",
+    "cards": {
+      "1": {
+        "prefix": "Get consultation and ",
+        "highlight": "furniture sketch"
+      },
+      "2": {
+        "prefix": "We'll select materials ",
+        "highlight": "balancing price and quality"
+      },
+      "3": {
+        "prefix": "We'll choose fittings for ",
+        "highlight": "comfort and convenience"
+      },
+      "4": {
+        "prefix": "We'll develop ",
+        "highlight": "free 3D",
+        "suffix": " project"
+      },
+      "5": {
+        "prefix": "We'll help you ",
+        "highlight": "save 20%",
+        "suffix": " of the cost"
+      }
+    }
+  },
+  "promo": {
+    "title": {
+      "prefix": "Order a ",
+      "highlight": "Kitchen"
+    },
+    "date": "Until March 31",
+    "text": {
+      "get": "Get",
+      "gift": "as a gift"
+    },
+    "button": "a Dishwasher"
+  },
+  "timer": {
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "works": {
+    "title": "Our Projects",
+    "link": {
+      "alt": "view project"
+    },
+    "items": {
+      "1": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "2": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "3": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "4": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "5": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "6": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "7": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "8": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "9": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "10": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "11": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      },
+      "12": {
+        "title": "Severin",
+        "price": "11,654",
+        "currency": "rub/month",
+        "period": "no down payment - 12 months"
+      }
+    }
+  },
+  "advantages": {
+    "title": "Our Advantages",
+    "icons": {
+      "1": {
+        "alt": "guarantee"
+      },
+      "2": {
+        "alt": "guarantee"
+      },
+      "3": {
+        "alt": "guarantee"
+      },
+      "4": {
+        "alt": "guarantee"
+      }
+    },
+    "items": {
+      "1": {
+        "title": "Best Price Guarantee",
+        "text": "As manufacturers, we can offer you the best price for your request"
+      },
+      "2": {
+        "title": "Installment Payment",
+        "text": "Get your dream kitchen now without advance payment, pay in equal installments over 12 months"
+      },
+      "3": {
+        "title": "Fast Production",
+        "text": "We'll manufacture your kitchen according to individual project in 25-45 days"
+      },
+      "4": {
+        "title": "Quality Guarantee",
+        "text": "We guarantee 100% quality without defects. We conduct trial kitchen assembly in workshop"
+      }
+    }
+  },
+  "order": {
+    "title": "Order a Kitchen",
+    "subtitle": "And get 10% discount",
+    "text": "On all appliances in Bomba and Maximum stores"
+  },
+  "consultation": {
+    "title": "Get a free kitchen design project and designer consultation",
+    "text": {
+      "part1": "You'll know exact ",
+      "highlight1": "cost of your kitchen",
+      "part2": " and get ",
+      "highlight2": "3D-project"
+    },
+    "phone": {
+      "placeholder": "Your phone"
+    }
+  },
+  "installment": {
+    "title": "Buy in installments!",
+    "calculator": {
+      "title": "Your new kitchen without upfront payment!"
+    },
+    "benefits": {
+      "1": "12-month installment", 
+      "2": "No fees or interest"
+    },
+    "form": {
+      "budget": {
+        "label": "Your Budget ₽:"
+      },
+      "period": {
+        "label": "Installment term (months):",
+        "6": "6 months",
+        "12": "12 months"
+      },
+      "downPayment": {
+        "label": "Down payment %:"
+      },
+      "name": {
+        "placeholder": "Your name:"
+      },
+      "phone": {
+        "placeholder": "Your phone:"
+      }
+    },
+    "result": {
+      "label": "Monthly payment:"
+    },
+    "submit": {
+      "button": "Submit Installment Application"
+    }
+  },
+  "process": {
+    "title": "Our workflow with clients",
+    "steps": {
+      "1": {
+        "number": "1",
+        "name": "Application",
+        "text": "Book a consultation by phone or online"
+      },
+      "2": {
+        "number": "2",
+        "name": "Measurement",
+        "text": "We'll take measurements, advise on communications, determine layout"
+      },
+      "3": {
+        "number": "3",
+        "name": "Design",
+        "text": "Designer creates project according to your wishes, selects materials considering layout and budget"
+      },
+      "4": {
+        "number": "4",
+        "name": "Production",
+        "text": "Kitchen manufacturing time from 25 days"
+      },
+      "5": {
+        "number": "5",
+        "name": "Installation",
+        "text": "Quick and quality installation of furniture and built-in appliances"
+      }
+    }
+  },
+  "professional": {
+    "title": "Entrust your kitchen to professionals",
+    "cards": {
+      "1": {
+        "image": {
+          "alt": "Tatiana"
+        },
+        "name": "Tatiana",
+        "position": "Designer",
+        "description": "\"Kitchen should be both beautiful and functional\". Loves complex, non-standard and bright projects."
+      },
+      "2": {
+        "image": {
+          "alt": "Svetlana"
+        },
+        "name": "Svetlana",
+        "position": "Designer",
+        "description": "20 years experience in furniture design. Worked with major Moldovan manufacturers."
+      },
+      "3": {
+        "image": {
+          "alt": "Christian"
+        },
+        "name": "Christian",
+        "position": "Designer",
+        "description": "5 years experience. Artist, teaches at design school. Focuses on aesthetics in kitchens."
+      }
+    }
+  },
+  "mistakes": {
+    "title": "Four mistakes when choosing a kitchen",
+    "cards": {
+      "1": {
+        "number": "1",
+        "title": "I'll design it myself or got paper sketch",
+        "description": "Poorly located storage areas, no storage space planned, inconvenient and irritating"
+      },
+      "2": {
+        "number": "2",
+        "title": "No contract or cost description",
+        "description": "Low-quality hardware, no quality guarantee, no accountability for defects, get different from what paid for"
+      },
+      "3": {
+        "number": "3",
+        "title": "Private craftsman",
+        "description": "Non-compliance with technology, unspecified terms and quality, materials need replacement in 6 months"
+      },
+      "4": {
+        "number": "4",
+        "title": "Famous brand or company",
+        "description": "Poorly located storage areas, no storage space planned, inconvenient and irritating"
+      }
+    },
+    "arrows": {
+      "left": "←",
+      "right": "→"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "button": {
+      "read": "Read in 7 mins"
+    },
+    "cards": {
+      "1": {
+        "image": {
+          "alt": "Kitchen article"
+        },
+        "date": "March 11, 2022",
+        "title": "What determines kitchen cost?",
+        "author": "By designer Svetlana"
+      },
+      "2": {
+        "image": {
+          "alt": "Design tips"
+        },
+        "date": "March 11, 2022",
+        "title": "How to choose perfect layout?",
+        "author": "Tips from designer Tatiana"
+      },
+      "3": {
+        "image": {
+          "alt": "2022 trends"
+        },
+        "date": "March 11, 2022",
+        "title": "Top 5 kitchen design trends 2022",
+        "author": "Review by Christian"
+      }
+    }
+  },
+  "chat": {
+    "icon": {
+      "alt": "Chat assistant"
+    },
+    "title": "Online assistant",
+    "close": "×",
+    "message": "Online consultation is not available on this site. The page is not commercial and was created for educational purposes."
+  }
+}
