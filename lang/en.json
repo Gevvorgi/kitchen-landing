@@ -210,9 +210,9 @@
   "consultation": {
     "title": "Get a free kitchen design project and designer consultation",
     "text": {
-      "part1": "You'll know exact ",
-      "highlight1": "cost of your kitchen",
-      "part2": " and get ",
+      "prefix": "You'll know exact ",
+      "highlight": "cost of your kitchen",
+      "middle": " and get ",
       "highlight2": "3D-project"
     },
     "phone": {
