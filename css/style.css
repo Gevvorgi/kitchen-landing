@@ -52,7 +52,7 @@ a {
 }
 
 .general-title {
-  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
   font-size: 4.3rem;
 }
 
@@ -88,7 +88,6 @@ a {
 
 .no-scroll {
   overflow: hidden;
-  position: fixed;
   width: 100%;
   height: 100%;
 }
@@ -96,6 +95,7 @@ a {
 /* Общие стили конец */
 
 .header-fixed-wrapper {
+  padding: 0 4%;
   position: fixed;
   top: 0;
   left: 0;
@@ -106,14 +106,14 @@ a {
 }
 
 .header {
+  /* padding-top: 10px; */
+  height: 12vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 108px;
-  padding: 27px 60px;
+  flex-wrap: nowrap;
   font-weight: 600;
   transition: all 0.3s ease;
-  background: #ffffff50;
 }
 
 .menu {
@@ -126,8 +126,8 @@ a {
   transition: transform 0.3s ease, opacity 0.3s ease;
   transform: translateX(100%);
   opacity: 0;
-  transform: none !important;
-  opacity: 1 !important;
+  transform: none;
+  opacity: 1;
 }
 
 .menu-bar.active {
@@ -258,25 +258,39 @@ a {
 
 .hero-section {
   position: relative;
-  margin-top: 108px;
+  margin-top: 12vh;
   height: 100vh;
   min-height: 600px;
   max-height: 1200px;
   color: #fff;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000050;
   background-image: url(../img/main-bg.png);
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .hero-content {
+  position: relative;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
+  z-index: 1;
 }
 
 .hero-title {
@@ -509,7 +523,7 @@ a {
 
 .work-card {
   min-height: 40rem;
-  padding: 3rem;
+  padding: 3rem 1rem 3rem 3rem;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -521,9 +535,14 @@ a {
   transition: all 0.3s ease;
 }
 
-.work-card:hover {
+/* .work-card:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.2);
+} */
+.work-card__wrapper {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
 }
 
 .work-card__title {
@@ -553,14 +572,14 @@ a {
 }
 
 .work-card__link {
-  position: absolute;
-  bottom: 3rem;
-  right: -5rem;
-  transition: all 0.3s ease;
+  transform: translateY(100%); /* Скрывает внизу */
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
 .work-card:hover .work-card__link {
-  right: 2rem;
+  transform: translateY(0); /* Показывает */
+  opacity: 1;
 }
 
 .work-card--1 {
